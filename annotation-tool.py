@@ -23,15 +23,13 @@
 import cv2
 import sys
 import numpy as np
-import os
 
 from math import cos, sin
-from os.path import isfile, splitext, basename, isdir
-from os import makedirs
+from os.path import isfile, splitext
 
-from src.utils import image_files_from_folder,getWH
-from src.label import Label, Shape, readShapes, writeShapes
-from src.projection_utils import perspective_transform, find_T_matrix, getRectPts
+from src.license_plate_extractor.utils import getWH
+from src.license_plate_extractor.label import Label, Shape, readShapes, writeShapes
+from src.license_plate_extractor.projection_utils import perspective_transform, find_T_matrix
 
 
 class ShapeDisplay(Shape):
